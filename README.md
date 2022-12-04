@@ -34,3 +34,10 @@ Ctrl+Enter                print a new line on stdout
 Ctrl+L                    clear screen
 Ctrl+C                    copy mouse position to clipboard
 ```
+
+Installation
+------------
+
+I used poetry, but you don't have to. Dependencies can be found in `pyproject.toml`.
+If you prefer plain `pip`, then create a virtual environment, activate it, and install
+the dependencies. Then start `main.py`.
