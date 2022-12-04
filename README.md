@@ -1,5 +1,5 @@
-ShowMousePosition
-=================
+Show Mouse Position
+===================
 
 A little GUI tool that shows the current mouse position.
 
