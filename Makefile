@@ -9,3 +9,6 @@ designer:
 
 run:
 	python3 main.py
+
+poetry_run:
+	poetry run python main.py
