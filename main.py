@@ -20,8 +20,9 @@ from PyQt5.QtWidgets import QApplication, QMainWindow, QShortcut
 
 import showMainGui
 
-VERSION = "0.1.0"
+VERSION = "0.1.1"
 GITHUB_URL = "https://github.com/jabbalaci/ShowMousePosition"
+WAIT = 0.05
 
 stop = False
 
@@ -32,6 +33,10 @@ def clear_screen():
     print("# tabula rasa")
 
 
+def wait():
+    time.sleep(WAIT)
+
+
 class MousePosition(QObject):
     pos_ready = pyqtSignal(int, int)
 
@@ -40,7 +45,7 @@ class MousePosition(QObject):
         while not stop:
             x, y = pyautogui.position()
             self.pos_ready.emit(x, y)
-            time.sleep(0.05)
+            wait()
 
 
 class Main(QMainWindow, showMainGui.Ui_MainWindow):
@@ -119,6 +124,7 @@ class Main(QMainWindow, showMainGui.Ui_MainWindow):
         global stop
         stop = True
         self.thread.quit()
+        wait()
 
 
 def print_help():
@@ -129,11 +135,11 @@ Shortcuts:
 ----------
 Ctrl+H                    this help
 Ctrl+Q                    quit
-Ctrl+P                    print mouse position on stdout
+Ctrl+P                    print mouse coordinates on stdout
 Ctrl+S, Ctrl+-            print separator on stdout
 Ctrl+Enter                print a new line on stdout
 Ctrl+L                    clear screen
-Ctrl+C                    copy mouse position to clipboard
+Ctrl+C                    copy mouse coordinates to clipboard
 """.strip()
     print(text)
 
