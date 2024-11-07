@@ -1,14 +1,11 @@
-all:
-	pyuic5 window.ui -o showMainGui.py
-
 cat:
 	cat Makefile
+
+all:
+	pyuic5 window.ui -o showMainGui.py
 
 designer:
 	designer window.ui
 
 run:
-	python3 main.py
-
-poetry_run:
-	poetry run python main.py
+	uv run main.py

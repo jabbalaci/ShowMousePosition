@@ -1,17 +1,11 @@
-[tool.poetry]
-name = "showmousepositiongui"
+[project]
+name = "showmouseposition"
 version = "0.1.0"
-description = ""
-authors = ["Jabba Laci <jabba.laci@gmail.com>"]
+description = "Add your description here"
 readme = "README.md"
-
-[tool.poetry.dependencies]
-python = "^3.10"
-pyqt5 = "^5.15.7"
-pyautogui = "^0.9.53"
-pyperclip = "^1.8.2"
-
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires-python = ">=3.12"
+dependencies = [
+    "pyautogui>=0.9.54",
+    "pyperclip>=1.9.0",
+    "pyqt5>=5.15.11",
+]

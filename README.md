@@ -36,23 +36,6 @@ Ctrl+L                    clear screen
 Ctrl+C                    copy mouse coordinates to clipboard
 ```
 
-Installation
-------------
-
-I used poetry, but you don't have to. Dependencies can be found in `pyproject.toml`.
-If you prefer plain `pip`, then create a virtual environment, activate it, and install
-the dependencies. Then start `main.py`.
-
-If you want to use poetry but you've never used it, here are the steps (thanks to /u/zom-ponks):
-
-```
-pip install poetry -U # if you haven't got it installed yet
-git clone https://github.com/jabbalaci/ShowMousePosition
-cd ShowMousePosition
-poetry install # this will install dependencies and create a venv
-poetry run python main.py
-```
-
 Supported Platforms
 -------------------
 
